@@ -1,5 +1,5 @@
 <launch>
-    <arg name="robot" />
+    <arg name="robot" default="robot_0"/>
     <arg name="type" default="turtle" />
     <arg name="controlled" default="true" />
 
