@@ -91,83 +91,83 @@ class CreateRunFiles(object):
                 #            omni = True
         self.output_dir = commands.getoutput('rospack find collvoid_stage')
 
-        self.create_world_file()
+        # self.create_world_file()
         self.create_launch_file()
-        if self.settings is None:
-            self.create_yaml_file()
+        # if self.settings is None:
+        #     self.create_yaml_file()
 
-    def create_world_file(self):
-        with open(self.output_dir + '/world/' + self.world_name + '_created.world', 'w') as self.worldFileNew:
-            with open(self.output_dir + '/world/' + self.world_name + '_template.world', 'r') as temp_world:
-                self.worldFileNew.write(temp_world.read())
+    # def create_world_file(self):
+    #     with open(self.output_dir + '/world/' + self.world_name + '_created.world', 'w') as self.worldFileNew:
+    #         with open(self.output_dir + '/world/' + self.world_name + '_template.world', 'r') as temp_world:
+    #             self.worldFileNew.write(temp_world.read())
 
-            direct = commands.getoutput('rospack find stage')
+    #         direct = commands.getoutput('rospack find stage')
 
-            colors = open(direct + '/rgb.txt', 'r')
-            line = colors.readline()
-            line = colors.readline()
-            cols = []
-            while line:
-                cols.append(line[line.rfind("\t") + 1:line.rfind("\n")])
-                line = colors.readline()
-            colors.close()
-            # print cols
-            if self.settings is not None:
-                for o in range(self.settings['num_obstacles']):
-                    self.worldFileNew.write(
-                        'obst( pose [ {0:f} {1:f} 0 {2:f} ] name "obst_{3:d}" color "red")\n'.format(
-                            self.settings["obst_%d" % o]['x'], self.settings["obst_%d" % o]['y'],
-                            math.degrees(self.settings["obst_%d" % o]['ang']), o))
+    #         colors = open(direct + '/rgb.txt', 'r')
+    #         line = colors.readline()
+    #         line = colors.readline()
+    #         cols = []
+    #         while line:
+    #             cols.append(line[line.rfind("\t") + 1:line.rfind("\n")])
+    #             line = colors.readline()
+    #         colors.close()
+    #         # print cols
+    #         if self.settings is not None:
+    #             for o in range(self.settings['num_obstacles']):
+    #                 self.worldFileNew.write(
+    #                     'obst( pose [ {0:f} {1:f} 0 {2:f} ] name "obst_{3:d}" color "red")\n'.format(
+    #                         self.settings["obst_%d" % o]['x'], self.settings["obst_%d" % o]['y'],
+    #                         math.degrees(self.settings["obst_%d" % o]['ang']), o))
 
-            for x in range(self.num_robots):
+    #         for x in range(self.num_robots):
 
-                if self.settings is None:
-                    angle = 360.0 / self.num_robots
-                    anglePrint = x * angle - 180 - 45
-                    angle = x * angle - 45
-                    posX = self.circle_size * math.cos(angle / 360 * 2 * math.pi)
+    #             if self.settings is None:
+    #                 angle = 360.0 / self.num_robots
+    #                 anglePrint = x * angle - 180 - 45
+    #                 angle = x * angle - 45
+    #                 posX = self.circle_size * math.cos(angle / 360 * 2 * math.pi)
 
-                    posY = self.circle_size * math.sin(angle / 360 * 2 * math.pi)
-                else:
-                    posX = self.settings["robot_%d" % x]['init_pose']['x']
-                    posY = self.settings["robot_%d" % x]['init_pose']['y']
-                    anglePrint = math.degrees(self.settings["robot_%d" % x]['init_pose']['ang'])
+    #                 posY = self.circle_size * math.sin(angle / 360 * 2 * math.pi)
+    #             else:
+    #                 posX = self.settings["robot_%d" % x]['init_pose']['x']
+    #                 posY = self.settings["robot_%d" % x]['init_pose']['y']
+    #                 anglePrint = math.degrees(self.settings["robot_%d" % x]['init_pose']['ang'])
 
-                if self.omni or self.use_sticks:
-                    if not self.use_sticks:
-                        self.worldFileNew.write(
-                            'pr2( pose [ {0:f} {1:f} 0 {2:f} ] name "robot_{3:d}" color "{4}")\n'.format(
-                                self.center_x + posX,
-                                self.center_y + posY,
-                                anglePrint, x,
-                                cols[
-                                    40 + 10 * x]))
-                    else:
-                        self.worldFileNew.write(
-                            'stick( pose [ {0:f} {1:f} 0 {2:f} ] name "robot_{3:d}" color "{4}")\n'.format(
-                                self.center_x + posX, self.center_y + posY, anglePrint, x, cols[40 + 10 * x]))
-                else:
-                    self.worldFileNew.write(
-                        'roomba( pose [ {0:f} {1:f} 0 {2:f} ] name "robot_{3:d}" color "{4}")\n'.format(
-                            self.center_x + posX,
-                            self.center_y + posY,
-                            anglePrint, x,
-                            cols[
-                                40 + 10 * x]))
+    #             if self.omni or self.use_sticks:
+    #                 if not self.use_sticks:
+    #                     self.worldFileNew.write(
+    #                         'pr2( pose [ {0:f} {1:f} 0 {2:f} ] name "robot_{3:d}" color "{4}")\n'.format(
+    #                             self.center_x + posX,
+    #                             self.center_y + posY,
+    #                             anglePrint, x,
+    #                             cols[
+    #                                 40 + 10 * x]))
+    #                 else:
+    #                     self.worldFileNew.write(
+    #                         'stick( pose [ {0:f} {1:f} 0 {2:f} ] name "robot_{3:d}" color "{4}")\n'.format(
+    #                             self.center_x + posX, self.center_y + posY, anglePrint, x, cols[40 + 10 * x]))
+    #             else:
+    #                 self.worldFileNew.write(
+    #                     'roomba( pose [ {0:f} {1:f} 0 {2:f} ] name "robot_{3:d}" color "{4}")\n'.format(
+    #                         self.center_x + posX,
+    #                         self.center_y + posY,
+    #                         anglePrint, x,
+    #                         cols[
+    #                             40 + 10 * x]))
 
-    def create_yaml_file(self):
-        with open(self.output_dir + '/params_created.yaml', 'w') as yaml_file:
-            angle = 360.0 / self.num_robots
-            for x in range(self.num_robots):
-                angle_x = x * angle - 45
-                pos_x = self.circle_size * math.cos(angle_x / 360 * 2 * math.pi)
-                pos_y = self.circle_size * math.sin(angle_x / 360 * 2 * math.pi)
+    # def create_yaml_file(self):
+    #     with open(self.output_dir + '/params_created.yaml', 'w') as yaml_file:
+    #         angle = 360.0 / self.num_robots
+    #         for x in range(self.num_robots):
+    #             angle_x = x * angle - 45
+    #             pos_x = self.circle_size * math.cos(angle_x / 360 * 2 * math.pi)
+    #             pos_y = self.circle_size * math.sin(angle_x / 360 * 2 * math.pi)
 
-                yaml_file.write('robot_{0}:\n'.format(x))
-                yaml_file.write('    goals:\n')
-                yaml_file.write("        - x: {0:f}\n".format(self.center_x - pos_x))
-                yaml_file.write('          y: {0:f}\n'.format(self.center_y - pos_y))
-                yaml_file.write("          ang: {0:f}\n".format(angle_x / 360.0 * 2 * math.pi))
+    #             yaml_file.write('robot_{0}:\n'.format(x))
+    #             yaml_file.write('    goals:\n')
+    #             yaml_file.write("        - x: {0:f}\n".format(self.center_x - pos_x))
+    #             yaml_file.write('          y: {0:f}\n'.format(self.center_y - pos_y))
+    #             yaml_file.write("          ang: {0:f}\n".format(angle_x / 360.0 * 2 * math.pi))
 
     def create_launch_file(self):
         with open(self.output_dir + '/launch/sim_created.launch', 'w') as f_launch:

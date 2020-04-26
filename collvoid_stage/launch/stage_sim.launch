@@ -1,0 +1,9 @@
+<launch>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find collvoid_stage)/world/AddverbMap.yaml"/>
+  <rosparam command="load" file="$(find collvoid_stage)/params/stage_params.yaml"/>
+  <node pkg="stage_ros" type="stageros" name="stageros" args="$(find collvoid_stage)/world/AddverbMap.world" respawn="false" output="screen" />
+
+  <node pkg="collvoid_controller" type="controller.py" name="controller" output="screen"/>
+  <node pkg="collvoid_controller" type="collvoid_visualizer.py" name="controller_viz" output="screen"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find collvoid_stage)/multi_view.rviz" output="screen" />
+</launch>

@@ -1,0 +1,391 @@
+<launch>
+<node name="fake_localization" pkg="fake_localization" ns="robot_70" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_70" />
+    <param name="~odom_frame_id" value="robot_70/odom" />
+    <param name="~base_frame_id" value="robot_70/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_70"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_70"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_71" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_71" />
+    <param name="~odom_frame_id" value="robot_71/odom" />
+    <param name="~base_frame_id" value="robot_71/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_71"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_71"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_72" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_72" />
+    <param name="~odom_frame_id" value="robot_72/odom" />
+    <param name="~base_frame_id" value="robot_72/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_72"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_72"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_73" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_73" />
+    <param name="~odom_frame_id" value="robot_73/odom" />
+    <param name="~base_frame_id" value="robot_73/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_73"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_73"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_74" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_74" />
+    <param name="~odom_frame_id" value="robot_74/odom" />
+    <param name="~base_frame_id" value="robot_74/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_74"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_74"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_75" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_75" />
+    <param name="~odom_frame_id" value="robot_75/odom" />
+    <param name="~base_frame_id" value="robot_75/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_75"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_75"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_76" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_76" />
+    <param name="~odom_frame_id" value="robot_76/odom" />
+    <param name="~base_frame_id" value="robot_76/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_76"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_76"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_77" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_77" />
+    <param name="~odom_frame_id" value="robot_77/odom" />
+    <param name="~base_frame_id" value="robot_77/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_77"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_77"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_78" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_78" />
+    <param name="~odom_frame_id" value="robot_78/odom" />
+    <param name="~base_frame_id" value="robot_78/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_78"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_78"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_79" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_79" />
+    <param name="~odom_frame_id" value="robot_79/odom" />
+    <param name="~base_frame_id" value="robot_79/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_79"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_79"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_80" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_80" />
+    <param name="~odom_frame_id" value="robot_80/odom" />
+    <param name="~base_frame_id" value="robot_80/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_80"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_80"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_81" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_81" />
+    <param name="~odom_frame_id" value="robot_81/odom" />
+    <param name="~base_frame_id" value="robot_81/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_81"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_81"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_82" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_82" />
+    <param name="~odom_frame_id" value="robot_82/odom" />
+    <param name="~base_frame_id" value="robot_82/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_82"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_82"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_83" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_83" />
+    <param name="~odom_frame_id" value="robot_83/odom" />
+    <param name="~base_frame_id" value="robot_83/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_83"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_83"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_84" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_84" />
+    <param name="~odom_frame_id" value="robot_84/odom" />
+    <param name="~base_frame_id" value="robot_84/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_84"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_84"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_85" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_85" />
+    <param name="~odom_frame_id" value="robot_85/odom" />
+    <param name="~base_frame_id" value="robot_85/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_85"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_85"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_86" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_86" />
+    <param name="~odom_frame_id" value="robot_86/odom" />
+    <param name="~base_frame_id" value="robot_86/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_86"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_86"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_87" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_87" />
+    <param name="~odom_frame_id" value="robot_87/odom" />
+    <param name="~base_frame_id" value="robot_87/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_87"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_87"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_88" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_88" />
+    <param name="~odom_frame_id" value="robot_88/odom" />
+    <param name="~base_frame_id" value="robot_88/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_88"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_88"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_89" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_89" />
+    <param name="~odom_frame_id" value="robot_89/odom" />
+    <param name="~base_frame_id" value="robot_89/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_89"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_89"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_90" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_90" />
+    <param name="~odom_frame_id" value="robot_90/odom" />
+    <param name="~base_frame_id" value="robot_90/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_90"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_90"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_91" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_91" />
+    <param name="~odom_frame_id" value="robot_91/odom" />
+    <param name="~base_frame_id" value="robot_91/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_91"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_91"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_92" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_92" />
+    <param name="~odom_frame_id" value="robot_92/odom" />
+    <param name="~base_frame_id" value="robot_92/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_92"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_92"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_93" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_93" />
+    <param name="~odom_frame_id" value="robot_93/odom" />
+    <param name="~base_frame_id" value="robot_93/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_93"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_93"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_94" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_94" />
+    <param name="~odom_frame_id" value="robot_94/odom" />
+    <param name="~base_frame_id" value="robot_94/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_94"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_94"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_95" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_95" />
+    <param name="~odom_frame_id" value="robot_95/odom" />
+    <param name="~base_frame_id" value="robot_95/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_95"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_95"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_96" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_96" />
+    <param name="~odom_frame_id" value="robot_96/odom" />
+    <param name="~base_frame_id" value="robot_96/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_96"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_96"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_97" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_97" />
+    <param name="~odom_frame_id" value="robot_97/odom" />
+    <param name="~base_frame_id" value="robot_97/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_97"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_97"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_98" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_98" />
+    <param name="~odom_frame_id" value="robot_98/odom" />
+    <param name="~base_frame_id" value="robot_98/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_98"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_98"/>
+
+
+  <node name="fake_localization" pkg="fake_localization" ns="robot_99" type="fake_localization" respawn="false">
+    <param name="~tf_prefix" value="robot_99" />
+    <param name="~odom_frame_id" value="robot_99/odom" />
+    <param name="~base_frame_id" value="robot_99/base_link" />
+  </node>
+  <include file="$(find collvoid_stage)/launch/move_base_collvoid.launch">
+    <arg name="robot" value="robot_99"/>
+    <arg name="type" value="turtle"/>
+    <arg name="controlled" value="true"/>
+  </include>
+  <node pkg="collvoid_controller" type="controller_robots.py" name="controller_robots" ns="robot_99"/>
+
+</launch>
